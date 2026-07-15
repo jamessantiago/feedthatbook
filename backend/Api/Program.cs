@@ -1,29 +1,36 @@
-using System.Text.Json.Serialization;
-using Microsoft.AspNetCore.Http.HttpResults;
+using Api.Services;
+using Core;
+using Core.Infrastructure;
+using Core.Services;
+using Microsoft.AspNetCore.Mvc;
 
+[assembly: ApiConventionType(typeof(DefaultApiConventions))]
 namespace Api;
 
-public class Program
+public static class Program
 {
     public static void Main(string[] args)
     {
-        var builder = WebApplication.CreateSlimBuilder(args);
+        CreateApp(args).Run();
+    }
 
-        builder.Services.ConfigureHttpJsonOptions(options =>
-        {
-            options.SerializerOptions.TypeInfoResolverChain.Insert(0, AppJsonSerializerContext.Default);
-        });
+    public static WebApplication CreateApp(string[] args)
+    {
+        var builder = WebApplication.CreateSlimBuilder(args);
+        builder.Configuration.Bind(CoreGlobal.Settings);
 
         builder.Services.AddControllers();
         builder.Services.AddOpenApi();
+        builder.Services.AddHttpClient();
 
-        // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+        builder.Services.AddInfrastructure();
+        builder.Services.AddCoreServices();
+        builder.Services.AddApiServices();
 
         var app = builder.Build();
 
         if (app.Environment.IsDevelopment())
         {
-            // we'll only load in openapi in dev mode, prod will use the built model stored in the client
             app.MapOpenApi();
         }
 
@@ -31,13 +38,6 @@ public class Program
 
         app.MapControllers();
 
-        app.Run();
+        return app;
     }
-}
-
-public record Todo(int Id, string? Title, DateOnly? DueBy = null, bool IsComplete = false);
-
-[JsonSerializable(typeof(Todo[]))]
-internal partial class AppJsonSerializerContext : JsonSerializerContext
-{
 }
