@@ -9,6 +9,9 @@ const baseCandidate: BookCandidate = {
   author: "J.R.R. Tolkien",
   first_publish_year: 1937,
   explanation: "A fantasy novel about a hobbit's adventure.",
+  summary: "A fantasy novel about a hobbit's adventure.",
+  link: "",
+  img_link: "",
 };
 
 describe("BookCard", () => {

@@ -90,7 +90,11 @@ describe("App", () => {
     );
     await user.click(screen.getByRole("button", { name: "Search" }));
 
-    expect(await screen.findByText("Rate limit exceeded")).toBeInTheDocument();
+    expect(
+      await screen.findByText(
+        "We're unable to search for books right now. Please try again later.",
+      ),
+    ).toBeInTheDocument();
   });
 
   it("shows error alert when startSearch fails", async () => {
@@ -108,6 +112,10 @@ describe("App", () => {
     );
     await user.click(screen.getByRole("button", { name: "Search" }));
 
-    expect(await screen.findByText("Network error")).toBeInTheDocument();
+    expect(
+      await screen.findByText(
+        "We're unable to search for books right now. Please try again later.",
+      ),
+    ).toBeInTheDocument();
   });
 });

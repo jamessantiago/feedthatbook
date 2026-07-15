@@ -73,6 +73,7 @@ deploy-service: publish
 	@echo "--- Ensuring remote path and user ---"
 	ssh -t $(SSH_TARGET) "sudo install -d -o $(SERVICE_NAME) -g $(SERVICE_NAME) $(REMOTE_PATH) 2>/dev/null; if ! id $(SERVICE_NAME) &>/dev/null; then sudo useradd --system --home $(REMOTE_PATH) --shell /usr/sbin/nologin $(SERVICE_NAME); sudo install -d -o $(SERVICE_NAME) -g $(SERVICE_NAME) $(REMOTE_PATH); fi"	
 	@echo "--- Syncing published app ---"
+	rsync -a --delete $(CLIENT_DIR)/dist/ $(PUBLISH_DIR)/wwwroot/
 	rsync -az --delete --chown=$(SERVICE_NAME):$(SERVICE_NAME) --rsync-path="sudo rsync" $(PUBLISH_DIR)/ $(SSH_TARGET):$(REMOTE_PATH)/
 	@echo "--- Deploying .env.production ---"
 	scp .env.production $(SSH_TARGET):/tmp/$(APP_NAME).env

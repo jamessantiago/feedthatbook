@@ -27,7 +27,7 @@ public class CoreGlobalTests
         Assert.Multiple(() =>
         {
             Assert.That(s.GeminiApiKey, Is.Null);
-            Assert.That(s.GeminiModelId, Is.EqualTo("gemini-flash-latest"));
+            Assert.That(s.GeminiModelId, Is.EqualTo("gemini-3.1-flash-lite"));
         });
     }
 }

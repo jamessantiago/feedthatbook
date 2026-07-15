@@ -61,6 +61,9 @@ describe("streamResults", () => {
           author: "Tolkien",
           first_publish_year: 1937,
           explanation: "A book",
+          summary: "A book",
+          link: "https://openlibrary.org",
+          img_link: "https://openlibrary.org",
         },
       ],
       success: false,
@@ -139,7 +142,15 @@ describe("streamResults", () => {
   it("handles partial chunks split across reads", async () => {
     const event: BookCandidateResponse = {
       matches: [
-        { title: "A", author: "B", first_publish_year: 2000, explanation: "X" },
+        {
+          title: "A",
+          author: "B",
+          first_publish_year: 2000,
+          explanation: "X",
+          summary: "X",
+          link: "https://openlibrary.org",
+          img_link: "https://openlibrary.org",
+        },
       ],
       success: true,
     };

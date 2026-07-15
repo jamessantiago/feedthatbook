@@ -1,4 +1,4 @@
-import { Card, Group, Text, Title, Image, Spoiler } from "@mantine/core";
+import { Card, Group, Text, Title, Image } from "@mantine/core";
 import type { BookCandidate } from "../api/books";
 
 interface BookCardProps {

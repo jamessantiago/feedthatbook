@@ -10,12 +10,18 @@ const candidates: BookCandidate[] = [
     author: "Tolkien",
     first_publish_year: 1937,
     explanation: "A fantasy novel.",
+    summary: "A fantasy novel.",
+    link: "https://openlibrary.org",
+    img_link: "https://openlibrary.org",
   },
   {
     title: "Dune",
     author: "Herbert",
     first_publish_year: 1965,
     explanation: "A sci-fi novel.",
+    summary: "A sci-fi novel.",
+    link: "https://openlibrary.org",
+    img_link: "https://openlibrary.org",
   },
 ];
 
@@ -26,7 +32,11 @@ describe("ResultsList", () => {
     );
 
     expect(screen.getByText("Error")).toBeInTheDocument();
-    expect(screen.getByText("Something went wrong")).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        "We're unable to search for books right now. Please try again later.",
+      ),
+    ).toBeInTheDocument();
   });
 
   it("renders nothing while loading with no candidates", () => {
