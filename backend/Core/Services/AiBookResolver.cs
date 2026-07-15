@@ -79,9 +79,9 @@ Examples:
 - "Title near-match ('Two Cities' for 'A Tale of Two Cities'); Dickens is primary author."
 - "Author-only match: top work by Stephen King."
 
-The summary should specify the edition details.
+The edition chosen and the link created based on the chosen edition should prefer english.  The image link should reflect the edition.
 
-The link field should prefer english results and use the openlibrary.org/books path.
+The summary should specify the edition details.
 
 Return a JSON array wrapped in { "matches": [...] }.
 Do NOT include any text outside the JSON object.
