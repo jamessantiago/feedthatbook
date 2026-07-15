@@ -50,6 +50,9 @@ test-client:
 test-backend:
 	dotnet test $(BACKEND_DIR)/Tests/Tests.csproj
 
+scan:
+	semgrep scan --config=auto
+
 PUBLISH_DIR := deploy/publish
 
 publish:

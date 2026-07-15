@@ -11,8 +11,7 @@ WorkingDirectory=/opt/findthatbook
 ExecStart=/opt/findthatbook/Api
 Restart=on-failure
 RestartSec=3
-Environment=ASPNETCORE_URLS=http://+:5000
-Environment=DOTNET_ENVIRONMENT=Production
+EnvironmentFile=/opt/findthatbook/.env
 
 NoNewPrivileges=true
 ProtectSystem=strict

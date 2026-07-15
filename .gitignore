@@ -6,6 +6,7 @@ obj/
 *.sln.docstates
 .vs/
 *.csproj.user
+backend/Api/logs/
 
 # Node / React
 node_modules/
