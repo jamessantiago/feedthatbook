@@ -14,7 +14,7 @@ public class OpenLibraryService(IHttpClientFactory httpClientFactory, ILogger<Op
     public Task<string> SearchBooksAsync(string query, CancellationToken token = default)
     {
         logger.LogInformation("LlmService::SearchBooksAsync {query}", query);
-        var url = $"{SearchUrl}?q={Uri.EscapeDataString(query)}&lang=en&fields=key,title,author_name,editions,editions.key,editions.title,editions.language,editions.cover_i";
+        var url = $"{SearchUrl}?q={Uri.EscapeDataString(query)}&lang=en&fields=key,title,author_name,editions,editions.key,editions.title,editions.language,editions.cover_i&limit=15";
         return _httpClient.GetStringAsync(url, token);
     }
 }
