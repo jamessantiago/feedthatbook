@@ -1,0 +1,28 @@
+2026-07-15 09:14:08.774 -05:00 [WRN] The WebRootPath was not found: /home/james/code/find-that-book/backend/Api/wwwroot. Static files may be unavailable.
+2026-07-15 09:14:08.907 -05:00 [WRN] The WebRootPath was not found: /home/james/code/find-that-book/backend/Api/wwwroot. Static files may be unavailable.
+2026-07-15 09:14:08.930 -05:00 [INF] Now listening on: http://localhost:5000
+2026-07-15 09:14:08.931 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-15 09:14:08.931 -05:00 [INF] Hosting environment: Development
+2026-07-15 09:14:08.931 -05:00 [INF] Content root path: /home/james/code/find-that-book/backend/Api
+2026-07-15 09:14:40.095 -05:00 [INF] Application is shutting down...
+2026-07-15 09:14:54.185 -05:00 [WRN] The WebRootPath was not found: /home/james/code/find-that-book/backend/Api/wwwroot. Static files may be unavailable.
+2026-07-15 09:14:54.219 -05:00 [WRN] The WebRootPath was not found: /home/james/code/find-that-book/backend/Api/wwwroot. Static files may be unavailable.
+2026-07-15 09:14:54.241 -05:00 [INF] Now listening on: http://localhost:5000
+2026-07-15 09:14:54.242 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-15 09:14:54.242 -05:00 [INF] Hosting environment: Development
+2026-07-15 09:14:54.242 -05:00 [INF] Content root path: /home/james/code/find-that-book/backend/Api
+2026-07-15 09:15:04.125 -05:00 [INF] Application is shutting down...
+2026-07-15 09:15:17.360 -05:00 [WRN] The WebRootPath was not found: /home/james/code/find-that-book/backend/Api/wwwroot. Static files may be unavailable.
+2026-07-15 09:15:17.382 -05:00 [WRN] The WebRootPath was not found: /home/james/code/find-that-book/backend/Api/wwwroot. Static files may be unavailable.
+2026-07-15 09:15:17.400 -05:00 [INF] Now listening on: http://localhost:5000
+2026-07-15 09:15:17.401 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-15 09:15:17.401 -05:00 [INF] Hosting environment: Development
+2026-07-15 09:15:17.401 -05:00 [INF] Content root path: /home/james/code/find-that-book/backend/Api
+2026-07-15 09:15:19.534 -05:00 [INF] Application is shutting down...
+2026-07-15 09:17:04.852 -05:00 [WRN] The WebRootPath was not found: /home/james/code/find-that-book/backend/Api/wwwroot. Static files may be unavailable.
+2026-07-15 09:17:04.873 -05:00 [WRN] The WebRootPath was not found: /home/james/code/find-that-book/backend/Api/wwwroot. Static files may be unavailable.
+2026-07-15 09:17:04.884 -05:00 [INF] Now listening on: http://localhost:5000
+2026-07-15 09:17:04.885 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-15 09:17:04.885 -05:00 [INF] Hosting environment: Production
+2026-07-15 09:17:04.885 -05:00 [INF] Content root path: /home/james/code/find-that-book/backend/Api
+2026-07-15 09:17:14.645 -05:00 [INF] Application is shutting down...

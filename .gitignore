@@ -25,6 +25,10 @@ Thumbs.db
 # Environment
 *.env
 *.env.local
+.env.production
 
 # Docker
 .dockerignore
+
+# Other
+deploy/publish/

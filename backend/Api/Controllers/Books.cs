@@ -17,7 +17,7 @@ public class Books : ControllerBase
     public ActionResult<StartSearchResult> StartSearch(
         [FromServices] SearchRequestStore store,
         [FromServices] AiBookResolver resolver,
-        [FromQuery] [MaxLength(500)] string query)
+        [FromQuery][MaxLength(500)] string query)
     {
         // register a channel
         var (id, channel) = store.Create();
@@ -30,10 +30,10 @@ public class Books : ControllerBase
             await channel.Writer.WriteAsync(result);
             channel.Writer.Complete();
         });
-        
+
         return Ok(new StartSearchResult { RequestId = id });
     }
-    
+
     [HttpGet("stream/{id:guid}")]
     [EndpointSummary("SSO stream for book results using AI")]
     public async Task Stream(

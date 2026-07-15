@@ -3,6 +3,7 @@ using Core;
 using Core.Infrastructure;
 using Core.Services;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 
 [assembly: ApiConventionType(typeof(DefaultApiConventions))]
 namespace Api;
@@ -27,6 +28,16 @@ public static class Program
         builder.Services.AddCoreServices();
         builder.Services.AddApiServices();
 
+        Log.Logger = new LoggerConfiguration()
+            .MinimumLevel.Information()
+            .WriteTo.Console()
+            .WriteTo.File(
+                "logs/findthatbook-.log",
+                rollingInterval: RollingInterval.Day,
+                retainedFileCountLimit: 30
+            ).CreateLogger();
+        builder.Host.UseSerilog();
+
         var app = builder.Build();
 
         if (app.Environment.IsDevelopment())
@@ -34,9 +45,12 @@ public static class Program
             app.MapOpenApi();
         }
 
-        app.UseHttpsRedirection();
+        app.UseDefaultFiles();
+        app.UseStaticFiles();
 
         app.MapControllers();
+
+        app.MapFallbackToFile("index.html");
 
         return app;
     }

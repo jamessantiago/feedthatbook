@@ -1,0 +1,24 @@
+[Unit]
+Description=Find That Book
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=findthatbook
+Group=findthatbook
+WorkingDirectory=/opt/findthatbook
+ExecStart=/opt/findthatbook/Api
+Restart=on-failure
+RestartSec=3
+Environment=ASPNETCORE_URLS=http://+:5000
+Environment=DOTNET_ENVIRONMENT=Production
+
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/opt/findthatbook
+ProtectHome=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

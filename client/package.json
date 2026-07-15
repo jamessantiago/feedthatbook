@@ -1,0 +1,42 @@
+{
+  "name": "find-that-book",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "watch": "concurrently -n be,fe -c cyan,magenta \"dotnet watch run --project ../backend/Api/Api.csproj --launch-profile https\" \"vite\"",
+    "start": "concurrently -n be,fe -c cyan,magenta \"dotnet run --project ../backend/Api/Api.csproj --launch-profile https\" \"vite\"",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx}\"",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@mantine/core": "9.4.0",
+    "@mantine/hooks": "9.4.0",
+    "@tabler/icons-react": "^3.44.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "concurrently": "^10.0.3",
+    "jsdom": "^29.1.1",
+    "postcss": "^8.5.8",
+    "postcss-preset-mantine": "1.18.0",
+    "postcss-simple-vars": "^7.0.1",
+    "prettier": "^3.9.5",
+    "typescript": "6.0.2",
+    "vite": "^8.0.0",
+    "vitest": "^4.1.10"
+  }
+}

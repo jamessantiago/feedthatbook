@@ -1,0 +1,10 @@
+[upstreams.findthatbook]
+addrs = ["127.0.0.1:5000"]
+read_timeout = "120s"
+
+[locations.findthatbook]
+upstream = "findthatbook"
+host = "findthatbook.santiagodevelopment.com"
+path = "/"
+enable_reverse_proxy_headers = true
+plugins = ["compression", "requestId"]
