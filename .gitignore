@@ -1,0 +1,30 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.sln.docstates
+.vs/
+*.csproj.user
+
+# Node / React
+node_modules/
+client/dist/
+client/build/
+client/.next/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+*.env
+*.env.local
+
+# Docker
+.dockerignore
