@@ -15,9 +15,10 @@ export default function ResultsList({
   done,
 }: ResultsListProps) {
   if (error) {
+    console.log(error);
     return (
       <Alert color="red" title="Error">
-        {error}
+        We're unable to search for books right now. Please try again later.
       </Alert>
     );
   }

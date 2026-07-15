@@ -15,6 +15,15 @@ public class BookCandidate
 
     [JsonPropertyName("explanation")]
     public string? Explanation { get; set; }
+    
+    [JsonPropertyName("summary")]
+    public string? Summary { get; set; }
+    
+    [JsonPropertyName("link")]
+    public string? Link { get; set; }
+    
+    [JsonPropertyName("img_link")]
+    public string? ImgLink { get; set; }
 }
 
 public class BookCandidateResponse

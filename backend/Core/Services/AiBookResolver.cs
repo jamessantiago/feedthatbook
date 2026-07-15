@@ -66,7 +66,10 @@ For each candidate return:
 "title": string,
 "author": string,
 "first_publish_year": int,
-"explanation": string
+"explanation": string,
+"summary": string,
+"link": string,
+"img_link": string,
 }
 
 The `explanation` field must explain WHY this book matched the query -- cite which fields aligned (title, author), what rank in the hierarchy was used, and whether the author is a primary author or a contributor. Do NOT describe the book's plot or content.
@@ -75,6 +78,10 @@ Examples:
 - "Exact title match; Tolkien is primary author; Dixon listed as adaptor."
 - "Title near-match ('Two Cities' for 'A Tale of Two Cities'); Dickens is primary author."
 - "Author-only match: top work by Stephen King."
+
+The summary should specify the edition details.
+
+The link field should prefer english results and use the openlibrary.org/books path.
 
 Return a JSON array wrapped in { "matches": [...] }.
 Do NOT include any text outside the JSON object.

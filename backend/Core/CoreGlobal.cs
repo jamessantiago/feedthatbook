@@ -8,5 +8,5 @@ public static class CoreGlobal
 public class Settings
 {
     public string? GeminiApiKey { get; set; }
-    public string GeminiModelId { get; set; } = "gemini-flash-latest";
+    public string GeminiModelId { get; set; } = "gemini-3.1-flash-lite";
 }

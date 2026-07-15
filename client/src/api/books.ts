@@ -3,6 +3,9 @@ export interface BookCandidate {
   author: string;
   first_publish_year: number;
   explanation: string;
+  summary: string;
+  link: string;
+  img_link: string;
 }
 
 export interface BookCandidateResponse {
