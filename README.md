@@ -20,7 +20,7 @@ Specify `GEMINIAPIKEY` key value in .env, appsettings.json, or launchSettings.js
 
 #### Running the app
 
-1. clone this repo `git clone ssh@github.com/jamessantiago/feedthatbook
+1. clone this repo `git clone git@github.com:jamessantiago/feedthatbook.git`
 1. run the project `cd feedthatbook && make run` or if make is unavailable `cd feedthatbook/client && npm run start`
 
 ## Architecture Overview
